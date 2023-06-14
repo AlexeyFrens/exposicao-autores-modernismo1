@@ -38,7 +38,7 @@ public class SaibaCeciliaFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        BotaoCecilia = new javax.swing.JButton();
+        BotaoCecilia = new javax.swing.JLabel();
         ImagemCecilia = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -52,12 +52,8 @@ public class SaibaCeciliaFrame extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel1.setText("Cecília Meireles");
 
-        BotaoCecilia.setText("Gerar Imagem");
-        BotaoCecilia.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotaoCeciliaActionPerformed(evt);
-            }
-        });
+        BotaoCecilia.setIcon(ImageCecilia);
+
 
         ImagemCecilia.setText("");
 
@@ -210,7 +206,7 @@ public class SaibaCeciliaFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BotaoCecilia;
+    private javax.swing.JLabel BotaoCecilia;
     private javax.swing.JButton BotaoObras;
     private javax.swing.JButton BotaoVolta;
     private javax.swing.JLabel ImagemCecilia;

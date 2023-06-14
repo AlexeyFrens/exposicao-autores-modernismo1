@@ -19,6 +19,7 @@ public class SaibaCarlosFrame extends javax.swing.JFrame {
     ImageIcon ImageCarlos = new ImageIcon(Toolkit.getDefaultToolkit().createImage(ImageIO.read(AutoursFrame.class.getResourceAsStream("/carlos.png")).getSource()));
     
     //Aqui está sendo criada objetos que são usados para representar uma imagem que será exibida na interface gráfica.
+    //O TollKit pega a imagem de dentro do executável e exibe na tela
     
     public SaibaCarlosFrame() throws IOException {
         initComponents();
@@ -38,7 +39,7 @@ public class SaibaCarlosFrame extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         imagemCarlos = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -51,14 +52,8 @@ public class SaibaCarlosFrame extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel1.setText("Carlos Drummond de Andrade");
 
-        imagemCarlos.setText("");
+        imagemCarlos.setIcon(ImageCarlos);
 
-        jButton1.setText("Gerar imagem");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
 
         jLabel2.setText("Nascimento: 31 de outubro de 1902");
 
@@ -208,7 +203,7 @@ public class SaibaCarlosFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botaoVoltar;
     private javax.swing.JLabel imagemCarlos;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

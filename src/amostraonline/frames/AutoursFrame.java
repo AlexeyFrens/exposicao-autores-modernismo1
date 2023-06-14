@@ -9,6 +9,8 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.IOException;
 
 /**
@@ -22,13 +24,17 @@ public class AutoursFrame extends javax.swing.JFrame {
     ImageIcon ImageCecilia = new ImageIcon(Toolkit.getDefaultToolkit().createImage(ImageIO.read(AutoursFrame.class.getResourceAsStream("/cecilia.png")).getSource()));
     
     //Aqui está sendo criada objetos que são usados para representar uma imagem que será exibida na interface gráfica.
-    // O toolkit é uma classe que consegue criar imagens a partir de arquivos de dentro do aplicativo
+    // O Tollkit pega a imagem de dentro do executável para a tela
+
     
     public AutoursFrame() throws IOException {
         initComponents();
         this.setLocation(500,200); //Indica a localização aonde a janela será gerada
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //Indica que quando o usuário fechar a janela, todos os processos serão finalizados
         this.setTitle("Autores"); //Indica o título da janela
+        this.imagemCarlos.setIcon(ImageCarlos);
+        this.imagemVinicius.setIcon(ImageVinicius);
+        this.imagemCecilia.setIcon(ImageCecilia);
     }
 
     /**
@@ -42,15 +48,15 @@ public class AutoursFrame extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         imagemCarlos = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         SaibaMaisCarlos = new javax.swing.JButton();
         SaibaMaisVinicius = new javax.swing.JButton();
         imagemVinicius = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JLabel();
         SaibaMaisCarlos2 = new javax.swing.JButton();
         imagemCecilia = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -59,13 +65,6 @@ public class AutoursFrame extends javax.swing.JFrame {
         jLabel1.setText("Principais autores do modernismo brasileiro");
 
         jButton1.setText("Carlos Drummond");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
-        jLabel3.setText("Aperte no botão para ver a imagem do autor");
 
         SaibaMaisCarlos.setText("Saiba Mais!");
         SaibaMaisCarlos.addActionListener(new java.awt.event.ActionListener() {
@@ -82,11 +81,6 @@ public class AutoursFrame extends javax.swing.JFrame {
         });
 
         jButton2.setText("Vinicius de Moraes");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
 
         SaibaMaisCarlos2.setText("Saiba Mais!");
         SaibaMaisCarlos2.addActionListener(new java.awt.event.ActionListener() {
@@ -96,16 +90,13 @@ public class AutoursFrame extends javax.swing.JFrame {
         });
 
         jButton3.setText("Cecília Meireles");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
 
         jButton4.setText("Sair");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+
+        jButton4.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
             }
         });
 
@@ -295,9 +286,9 @@ public class AutoursFrame extends javax.swing.JFrame {
     private javax.swing.JLabel imagemCarlos;
     private javax.swing.JLabel imagemCecilia;
     private javax.swing.JLabel imagemVinicius;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JLabel jButton1;
+    private javax.swing.JLabel jButton2;
+    private javax.swing.JLabel jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;

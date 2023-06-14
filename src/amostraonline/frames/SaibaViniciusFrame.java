@@ -37,7 +37,7 @@ public class SaibaViniciusFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JPanel();
         imagemVinicius = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -51,15 +51,8 @@ public class SaibaViniciusFrame extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel1.setText("Vinicius de Moraes");
 
-        jButton1.setText("Gerar Imagem");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
 
-        imagemVinicius.setText("");
-
+        imagemVinicius.setIcon(ImageVinicius);
         jLabel3.setText("Nascimento: 19 de outubro de 1913");
 
         jLabel4.setText("Falecimento: 9 de julho de 1980");
@@ -209,7 +202,7 @@ public class SaibaViniciusFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ObrasVinicius;
     private javax.swing.JLabel imagemVinicius;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JPanel jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;

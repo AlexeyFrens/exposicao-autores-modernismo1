@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact name="exposicao-autores-modernismo:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/exposicao_autores_modernismo_jar</output-path>
+    <root id="root">
+      <element id="archive" name="exposicao-autores-modernismo.jar">
+        <element id="module-output" name="exposicao-autores-modernismo" />
+      </element>
+    </root>
+  </artifact>
+</component>
